@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
-app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
+app.set('views', path.join(__dirname, 'views')); // Seteo de la ubicación de la carpeta "views"
 
 
 
@@ -26,7 +26,10 @@ app.use(require("./middlewares/usersLogs"));
 
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main');
+
+
 app.use('/', mainRouter);
+
 
 
 

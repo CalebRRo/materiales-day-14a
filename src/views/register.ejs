@@ -2,7 +2,7 @@
 <body>
 	<%- include("./partials/header") %> 
     <div class="container"></div>
-    <h1>Login</h1>
+    <h1>Registro</h1>
     <div class="row">
         <div class="col-6 mx-auto">
             <div class="card">
@@ -12,11 +12,19 @@
                           <label for="user" class="form-label">Nombre</label>
                           <input type="text" class="form-control" name="user" id="user" aria-describedby="emailHelp">
                         </div>
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" name="surname" id="surname" aria-describedby="emailHelp">
+                          </div>
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+                          </div>
                           <div class="mb-3">
                             <label for="Password" class="form-label">Password</label>
                             <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp">
                           </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
                       </form>
                 </div>
             </div>
@@ -26,4 +34,3 @@
 	<%- include("./partials/footer") %> 
 </body>
 </html>
-
