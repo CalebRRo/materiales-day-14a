@@ -7,22 +7,32 @@
         <div class="col-6 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="/admin">
+                    <form action="" method="POST">
                         <div class="mb-3">
-                          <label for="user" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" name="user" id="user" aria-describedby="emailHelp">
+                          <label for="name" class="form-label">Nombre</label>
+                          <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" name="name" id="name" aria-describedby="emailHelp" value="<%= locals.old && old.username ? old.username : null %>">
+                          <p class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null%> </p>
+                        </div>
                         </div>
                         <div class="mb-3">
                             <label for="surname" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" name="surname" id="surname" aria-describedby="emailHelp">
+                            <input type="text" class="form-control <%= locals.errors && errors.surname ? 'is-invalid' : null %>" name="surname" id="surname" aria-describedby="emailHelp" value="<%= locals.old && old.surname ? old.surname : null %>">
+                            <p class="text-danger"><%= locals.errors && errors.surname ? errors.surname.msg : null%> </p>
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+                            <input type="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" id="email" aria-describedby="emailHelp" value="<%= locals.old && old.email ? old.email : null %>">
+                            <p class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null%> </p>
                           </div>
                           <div class="mb-3">
                             <label for="Password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp">
+                            <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" name="password" id="password" aria-describedby="emailHelp">
+                            <p class="text-danger"><%= locals.errors && errors.password ? errors.password.msg : null%> </p>
+                          </div>
+                          <div class="mb-3">
+                            <label for="Password2" class="form-label">Confirmar Password</label>
+                            <input type="password" class="form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %>" name="password2" id="password" aria-describedby="emailHelp">
+                            <p class="text-danger"><%= locals.errors && errors.password2 ? errors.password2.msg : null%> </p>
                           </div>
                         <button type="submit" class="btn btn-primary">Registrarse</button>
                       </form>

@@ -7,15 +7,17 @@
         <div class="col-6 mx-auto">
             <div class="card">
                 <div class="card-body">
-                    <form action="/admin">
-                        <div class="mb-3">
-                          <label for="user" class="form-label">Nombre</label>
-                          <input type="text" class="form-control" name="user" id="user" aria-describedby="emailHelp">
-                        </div>
-                          <div class="mb-3">
-                            <label for="Password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp">
-                          </div>
+                    <form action="" method="post">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" name="name" id="name" aria-describedby="emailHelp" value="<%= locals.old && old.username ? old.username : null %>">
+                        <p class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null%> </p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Password" class="form-label">Password</label>
+                        <input type="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" name="password" id="password" aria-describedby="emailHelp">
+                        <p class="text-danger"><%= locals.errors && errors.password ? errors.password.msg : null%> </p>
+                      </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                       </form>
                 </div>

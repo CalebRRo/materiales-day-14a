@@ -1,10 +1,34 @@
 [
-    {
-        "id": 1,
-        "name": "Greta",
-        "surname": "Graciano",
-        "email": "greta@gmail.com",
-        "password": "123456",
-        "avatar": null 
-     }
+   {
+      "id": 1,
+      "name": "Greta",
+      "surname": "Graciano",
+      "email": "greta@gmail.com",
+      "password": "123456",
+      "avatar": null
+   },
+   {
+      "id": 2,
+      "name": "caleb",
+      "surname": "romanos",
+      "email": "calebromanoss@gmail.com",
+      "password": "",
+      "avatar": null
+   },
+   {
+      "id": 3,
+      "name": "caleb",
+      "surname": "romanos",
+      "email": "calebromanoss@gmail.com",
+      "password": "123456",
+      "avatar": null
+   },
+   {
+      "id": 4,
+      "name": "caleb",
+      "surname": "romanos",
+      "email": "calebromanoss@gmailc.com",
+      "password": "$2a$12$R22I/qiWOthaPezI.N7.UePaVVrK.cKZdqZVwiRj.TCnPmbLsxHza",
+      "avatar": null
+   }
 ]

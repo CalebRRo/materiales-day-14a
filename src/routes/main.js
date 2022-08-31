@@ -1,10 +1,12 @@
 const express = require("express");
-const {index,contact,users,about,admin,login,register,processRegister} = require("../controllers/mainController");
-
+const {index,contact,users,about,admin,login,register,processRegister, processLogin} = require("../controllers/mainController");
 
 const router = express.Router();
 
+const {registerValidator, loginValidator} = require('../validations');
+
 const accessAdmin = require("../middlewares/accessAdmin");
+
 
 router
       .get("/", index)
@@ -13,13 +15,13 @@ router
       .get("/contact", contact)
       .get("/admin", accessAdmin,admin)
        
+      /* USERS-register */
+      .get("/register", register)
+      .post('/register',registerValidator, processRegister)
+      
       /* USERS-lOGIN */
       .get("/login", login)
-
-       /* USERS-register */
-      .get("/register", register)
-      .post('/register', processRegister)
-
+      .post("/login",loginValidator, processLogin)
 
       
       
